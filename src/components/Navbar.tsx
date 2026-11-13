@@ -13,6 +13,7 @@ export default function Navbar() {
           <span>LazyTranslator</span>
         </Link>
         <div className="hidden items-center gap-1 md:flex">
+          <Link href="#how" className="rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">How it works</Link>
           <Link href="#features" className="rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">Features</Link>
           <Link href="#privacy" className="rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">Privacy</Link>
           <Link href="#download" className="rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">Download</Link>

@@ -56,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <section id="how" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <Reveal className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("how_title")}</h2>
         </Reveal>
