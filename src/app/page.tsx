@@ -152,13 +152,13 @@ export default function Home() {
               </ul>
               <p className="mt-2 text-sm text-muted-foreground">{t("windows_soon")}</p>
             </div>
-            <Reveal className="mt-8">
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-amber/15 via-terracotta/10 to-violet/15 p-8 text-center shadow-sm sm:p-14">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("updates_title")}</h2>
-                <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t("upd_1_d")}</p>
-              </div>
-            </Reveal>
           </div>
+          <Reveal className="mt-8">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-amber/15 via-terracotta/10 to-violet/15 p-8 text-center shadow-sm sm:p-14">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("updates_title")}</h2>
+              <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t("upd_1_d")}</p>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
