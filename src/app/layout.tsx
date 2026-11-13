@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
+
+const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin"], weight: ["300","400","500","600","700"] });
 
 export const metadata: Metadata = {
   title: "LazyTranslator — 100% Local macOS Translation, Transcription & OCR",
-  description: "Privacy-first native macOS app.",
+  description: "Privacy-first native macOS app for document translation, audio/video transcription & subtitles, and PDF/image OCR.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <LanguageProvider>{children}</LanguageProvider>
+    <html lang="en" className={`${outfit.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        <LanguageProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
