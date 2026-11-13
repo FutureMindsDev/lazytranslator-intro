@@ -18,7 +18,7 @@ export default function Navbar() {
           <Link href="#download" className="rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">Download</Link>
         </div>
         <div className="flex items-center gap-2">
-          <select value={lang} onChange={(e) => setLang(e.target.value)} className="rounded-full border border-border bg-card px-3 py-1.5 text-sm">
+          <select value={lang} onChange={(e) => setLang(e.target.value)} className="rounded-full border border-border bg-card px-3 py-1.5 pr-8 text-sm">
             {LANGUAGES.map((l) => <option key={l.code} value={l.code}>{l.label}</option>)}
           </select>
         </div>
