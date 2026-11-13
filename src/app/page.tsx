@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* Download */}
-      <section className="border-y border-border bg-muted/40" id="download">
+      <section className="border-y border-border bg-gradient-to-br from-amber/15 via-terracotta/10 to-violet/15" id="download">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <Reveal className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("download_title")}</h2>
@@ -153,12 +153,6 @@ export default function Home() {
               <p className="mt-2 text-sm text-muted-foreground">{t("windows_soon")}</p>
             </div>
           </div>
-          <Reveal className="mt-8">
-            <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-amber/15 via-terracotta/10 to-violet/15 p-8 text-center shadow-sm sm:p-14">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("updates_title")}</h2>
-              <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t("upd_1_d")}</p>
-            </div>
-          </Reveal>
         </div>
       </section>
     </>
