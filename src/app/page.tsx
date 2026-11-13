@@ -224,7 +224,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-slate-900 text-slate-300 py-10">
+      <footer className="footer-snap bg-slate-900 text-slate-300 py-10">
         <div className="max-w-[1120px] mx-auto px-6 grid md:grid-cols-2 gap-6">
           <div>
             <div className="font-semibold text-white text-lg">LazyTranslator</div>
