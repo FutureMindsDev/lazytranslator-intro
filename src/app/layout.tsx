@@ -8,8 +8,9 @@ import { LanguageProvider } from "@/context/LanguageContext";
 const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin"], weight: ["300","400","500","600","700"] });
 
 export const metadata: Metadata = {
-  title: "LazyTranslator — 100% Local macOS Translation, Transcription & OCR",
+  title: "LazyTranslator",
   description: "Privacy-first native macOS app for document translation, audio/video transcription & subtitles, and PDF/image OCR.",
+  icons: { icon: "/favicon.png", apple: "/favicon.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
