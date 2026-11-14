@@ -27,8 +27,7 @@ export default function Home() {
     {
       id: "dmg",
       badge: "Option A",
-      title: t("option_a_title") || "Option A — Download the .dmg",
-      tagline: t("option_a_tagline") || "Download the arm64 .dmg from GitHub Releases.",
+      title: "Installing by downloading the .dmg file",
       highlights: [
         "Download the arm64.dmg file from GitHub Releases",
         "Open the .dmg file",
@@ -60,8 +59,7 @@ export default function Home() {
     {
       id: "brew",
       badge: "Option B",
-      title: t("option_b_title") || "Option B — Homebrew",
-      tagline: t("option_b_tagline") || "Install with a single brew command.",
+      title: "Installing via Homebrew",
       highlights: [
         "brew install --cask --no-quarantine ...",
         "Run xattr -cr /Applications/LazyTranslator.app",
@@ -69,7 +67,7 @@ export default function Home() {
       ],
       details: (
         <div className="space-y-3 text-sm">
-          <p>Install via Homebrew, then still run the xattr command:</p>
+          <p>Install via Homebrew (if you haven't installed Homebrew yet, install it from <a href="https://brew.sh" target="_blank" rel="noopener noreferrer" className="text-primary underline">brew.sh</a>), then still run the xattr command:</p>
           <pre className="rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
             brew install --cask --no-quarantine FutureMindsDev/lazytranslator/lazytranslator
           </pre>

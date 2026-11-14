@@ -29,7 +29,7 @@ export interface OptionItem {
   badge?: string;
   title: string;
   /** One-line pitch shown on the card. */
-  tagline: string;
+  tagline?: string;
   /** Short bullet highlights shown on the card. */
   highlights: string[];
   /** Full details rendered inside the modal (static markup only). */
@@ -198,7 +198,9 @@ export function OptionCards({ options, columns = 2 }: { options: OptionItem[]; c
               <span className="mt-2 text-lg font-bold tracking-tight text-card-foreground">
                 {option.title}
               </span>
-              <span className="mt-1 text-sm text-muted-foreground">{option.tagline}</span>
+              {option.tagline ? (
+                <span className="mt-1 text-sm text-muted-foreground">{option.tagline}</span>
+              ) : null}
               <span className="mt-4 space-y-2">
                 {option.highlights.map((h) => (
                   <span key={h} className="flex items-start gap-2 text-sm text-muted-foreground">
