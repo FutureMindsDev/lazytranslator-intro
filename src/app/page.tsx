@@ -45,7 +45,9 @@ export default function Home() {
             <li>Open the downloaded .dmg file.</li>
             <li>Drag LazyTranslator.app into your Applications folder.</li>
             <li>
-              Because the app is not verified with an Apple Developer ID, run:
+              Because the app is not verified with an Apple Developer ID, open
+              Terminal (press Command + Spacebar to open Spotlight, type
+              "Terminal", and press Enter), then run:
               <pre className="mt-2 rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
                 xattr -cr /Applications/LazyTranslator.app
               </pre>
