@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FadeIn, Reveal, Stagger, StaggerItem } from "@/components/Animate";
-import { OptionCards } from "@/components/ui/option-cards";
 import type { OptionItem } from "@/components/ui/option-cards";
 import { useT } from "@/context/LanguageContext";
 
@@ -198,8 +197,22 @@ export default function Home() {
             <p className="mt-4 text-center text-sm text-muted-foreground">
               {t("install_1")} {t("install_2")} {t("install_3")}
             </p>
-            <div className="mt-8">
-              <OptionCards options={downloadOptions} />
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {downloadOptions.map((opt) => (
+                <div
+                  key={opt.id}
+                  className="rounded-3xl border border-border bg-card p-6 shadow-sm"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground">
+                      {opt.badge}
+                    </span>
+                  </div>
+                  <h3 className="font-display mt-4 text-xl font-semibold">{opt.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{opt.tagline}</p>
+                  <div className="mt-4">{opt.details}</div>
+                </div>
+              ))}
             </div>
             <div className="mt-6">
               <h3 className="text-sm font-semibold">{t("reqs_title")}</h3>
