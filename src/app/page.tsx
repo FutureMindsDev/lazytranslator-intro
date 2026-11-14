@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FadeIn, Reveal, Stagger, StaggerItem } from "@/components/Animate";
+import { OptionCards } from "@/components/ui/option-cards";
+import type { OptionItem } from "@/components/ui/option-cards";
 import { useT } from "@/context/LanguageContext";
 
 const features = [
@@ -21,6 +23,67 @@ const steps = [
 
 export default function Home() {
   const { t } = useT();
+
+  const downloadOptions: OptionItem[] = [
+    {
+      id: "dmg",
+      badge: "Option A",
+      title: t("option_a_title") || "Option A — Download the .dmg",
+      tagline: t("option_a_tagline") || "Download the arm64 .dmg from GitHub Releases.",
+      highlights: [
+        "Download the arm64.dmg file from GitHub Releases",
+        "Open the .dmg file",
+        "Drag LazyTranslator.app into Applications",
+        "Run xattr -cr /Applications/LazyTranslator.app",
+        "Launch LazyTranslator from Applications",
+      ],
+      details: (
+        <div className="space-y-3 text-sm">
+          <p>
+            Download the <strong>arm64.dmg</strong> file from the GitHub Releases
+            page, then:
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>Open the downloaded .dmg file.</li>
+            <li>Drag LazyTranslator.app into your Applications folder.</li>
+            <li>
+              Because the app is not verified with an Apple Developer ID, run:
+              <pre className="mt-2 rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
+                xattr -cr /Applications/LazyTranslator.app
+              </pre>
+            </li>
+            <li>Launch LazyTranslator from Applications.</li>
+          </ol>
+        </div>
+      ),
+      accent: "terracotta",
+    },
+    {
+      id: "brew",
+      badge: "Option B",
+      title: t("option_b_title") || "Option B — Homebrew",
+      tagline: t("option_b_tagline") || "Install with a single brew command.",
+      highlights: [
+        "brew install --cask --no-quarantine ...",
+        "Run xattr -cr /Applications/LazyTranslator.app",
+        "Launch LazyTranslator from Applications",
+      ],
+      details: (
+        <div className="space-y-3 text-sm">
+          <p>Install via Homebrew, then still run the xattr command:</p>
+          <pre className="rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
+            brew install --cask --no-quarantine FutureMindsDev/lazytranslator/lazytranslator
+          </pre>
+          <pre className="rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
+            xattr -cr /Applications/LazyTranslator.app
+          </pre>
+          <p>Then launch LazyTranslator from Applications.</p>
+        </div>
+      ),
+      accent: "violet",
+    },
+  ];
+
   return (
     <>
       {/* Hero */}
@@ -128,20 +191,16 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("download_title")}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t("download_sub")}</p>
           </Reveal>
-          <div className="mt-10 mx-auto max-w-2xl rounded-3xl border border-border bg-card p-8 shadow-sm">
+          <div className="mt-10 mx-auto max-w-4xl">
             <a href="https://github.com/FutureMindsDev/homebrew-lazytranslator/releases/latest" className="inline-flex h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-terracotta to-amber text-sm font-semibold text-accent-foreground shadow-md transition-transform hover:scale-[1.03]">
               {t("download_btn")}
             </a>
-            <ol className="mt-6 space-y-2 text-sm text-muted-foreground list-decimal pl-5">
-              <li>{t("install_1")}</li>
-              <li>{t("install_2")}</li>
-              <li>{t("install_3")}</li>
-            </ol>
-            <details className="mt-6">
-              <summary className="cursor-pointer text-sm font-semibold">{t("gatekeeper")}</summary>
-              <pre className="mt-2 rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">brew install --cask --no-quarantine FutureMindsDev/lazytranslator/lazytranslator</pre>
-              <pre className="mt-2 rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">xattr -cr /Applications/LazyTranslator.app</pre>
-            </details>
+            <p className="mt-4 text-center text-sm text-muted-foreground">
+              {t("install_1")} {t("install_2")} {t("install_3")}
+            </p>
+            <div className="mt-8">
+              <OptionCards options={downloadOptions} />
+            </div>
             <div className="mt-6">
               <h3 className="text-sm font-semibold">{t("reqs_title")}</h3>
               <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
