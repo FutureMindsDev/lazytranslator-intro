@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FadeIn, Reveal, Stagger, StaggerItem } from "@/components/Animate";
 import type { OptionItem } from "@/components/ui/option-cards";
+import { CodeBlock } from "@/components/CodeBlock";
 import { useT } from "@/context/LanguageContext";
 
 const features = [
@@ -47,9 +48,7 @@ export default function Home() {
             <li>
               Open Terminal (press Command + Spacebar to open Spotlight, type
               "Terminal", and press Enter), then run:
-              <pre className="mt-2 rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
-                xattr -cr /Applications/LazyTranslator.app
-              </pre>
+              <CodeBlock code="xattr -cr /Applications/LazyTranslator.app" />
             </li>
             <li>Launch LazyTranslator from Applications.</li>
           </ol>
@@ -69,12 +68,9 @@ export default function Home() {
       details: (
         <div className="space-y-3 text-sm">
           <p>Install via Homebrew (if you haven't installed Homebrew yet, install it from <a href="https://brew.sh" target="_blank" rel="noopener noreferrer" className="text-primary underline">brew.sh</a>), then still run the xattr command:</p>
-          <pre className="rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
-            brew install --cask --no-quarantine FutureMindsDev/lazytranslator/lazytranslator
-          </pre>
-          <pre className="rounded-xl border border-border bg-muted p-3 text-xs overflow-x-auto">
-            xattr -cr /Applications/LazyTranslator.app
-          </pre>
+          <CodeBlock
+            code={`brew install --cask --no-quarantine FutureMindsDev/lazytranslator/lazytranslator\nxattr -cr /Applications/LazyTranslator.app`}
+          />
           <p>Then launch LazyTranslator from Applications.</p>
         </div>
       ),
