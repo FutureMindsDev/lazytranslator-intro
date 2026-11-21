@@ -61,7 +61,7 @@ export default function Home() {
       badge: "Option B",
       title: "Installing via Homebrew",
       highlights: [
-        "brew install --cask --no-quarantine ...",
+        "brew install --cask FutureMindsDev/lazytranslator/lazytranslator",
         "Run xattr -cr /Applications/LazyTranslator.app",
         "Launch LazyTranslator from Applications",
       ],
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="space-y-3 text-sm">
           <p>Install via Homebrew (if you haven't installed Homebrew yet, install it from <a href="https://brew.sh" target="_blank" rel="noopener noreferrer" className="text-primary underline">brew.sh</a>), then still run the xattr command:</p>
           <CodeBlock
-            code={`brew install --cask --no-quarantine FutureMindsDev/lazytranslator/lazytranslator\nxattr -cr /Applications/LazyTranslator.app`}
+            code={`brew install --cask FutureMindsDev/lazytranslator/lazytranslator\nxattr -cr /Applications/LazyTranslator.app`}
           />
           <p>Then launch LazyTranslator from Applications.</p>
         </div>
