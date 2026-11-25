@@ -190,7 +190,7 @@ export default function Home() {
               {t("download_btn")}
             </a>
             <p className="mt-4 text-center text-sm text-muted-foreground">
-              {t("install_1")} {t("install_2")} {t("install_3")}
+              {t("install_1")}
             </p>
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               {downloadOptions.map((opt) => (
