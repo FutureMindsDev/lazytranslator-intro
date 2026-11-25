@@ -186,7 +186,7 @@ export default function Home() {
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t("download_sub")}</p>
           </Reveal>
           <div className="mt-10 mx-auto max-w-4xl">
-            <a href="https://github.com/FutureMindsDev/homebrew-lazytranslator/releases/latest" className="inline-flex h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-terracotta to-amber text-sm font-semibold text-accent-foreground shadow-md transition-transform hover:scale-[1.03]">
+            <a href="https://github.com/FutureMindsDev/homebrew-lazytranslator/releases/latest" target="_blank" rel="noopener noreferrer" className="inline-flex h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-terracotta to-amber text-sm font-semibold text-accent-foreground shadow-md transition-transform hover:scale-[1.03]">
               {t("download_btn")}
             </a>
             <p className="mt-4 text-center text-sm text-muted-foreground">
