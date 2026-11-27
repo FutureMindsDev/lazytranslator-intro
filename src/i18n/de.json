@@ -54,5 +54,6 @@
   "upd_3_t": "Terminal-Update",
   "upd_3_d": "Über Homebrew installiert? Aktualisieren mit brew upgrade --cask lazytranslator.",
   "footer": "© LazyTranslator. 100 % lokal. 100 % privat.",
-  "footer2": "Mit Rust gebaut · Metal-beschleunigt"
+  "footer2": "Mit Rust gebaut · Metal-beschleunigt",
+  "downloads_count": "Downloads"
 }

@@ -54,5 +54,6 @@
   "upd_3_t": "تحديث عبر الطرفية",
   "upd_3_d": "مُثبّت عبر Homebrew؟ حدّث بـ brew upgrade --cask lazytranslator.",
   "footer": "© LazyTranslator. 100% محلي. 100% خاص.",
-  "footer2": "مبني بـ Rust · مسرّع بـ Metal"
+  "footer2": "مبني بـ Rust · مسرّع بـ Metal",
+  "downloads_count": "تنزيل"
 }

@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FadeIn, Reveal, Stagger, StaggerItem } from "@/components/Animate";
@@ -23,6 +24,17 @@ const steps = [
 
 export default function Home() {
   const { t } = useT();
+  const [downloadCount, setDownloadCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/FutureMindsDev/homebrew-lazytranslator/releases/latest")
+      .then((r) => r.json())
+      .then((d) => {
+        const asset = (d.assets || []).find((a: any) => a.name?.includes("macos-arm64.dmg"));
+        if (asset) setDownloadCount(asset.download_count);
+      })
+      .catch(() => {});
+  }, []);
 
   const downloadOptions: OptionItem[] = [
     {
@@ -189,6 +201,11 @@ export default function Home() {
             <a href="https://github.com/FutureMindsDev/homebrew-lazytranslator/releases/latest" target="_blank" rel="noopener noreferrer" className="inline-flex h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-terracotta to-amber text-sm font-semibold text-accent-foreground shadow-md transition-transform hover:scale-[1.03]">
               {t("download_btn")}
             </a>
+            {downloadCount !== null && (
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                {downloadCount.toLocaleString()} {t("downloads_count")}
+              </p>
+            )}
             <p className="mt-4 text-center text-sm text-muted-foreground">
               {t("install_1")}
             </p>

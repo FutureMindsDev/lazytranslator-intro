@@ -54,5 +54,6 @@
   "upd_3_t": "终端更新",
   "upd_3_d": "通过 Homebrew 安装？使用 brew upgrade --cask lazytranslator 更新.",
   "footer": "© LazyTranslator. 100% 本地. 100% 隐私.",
-  "footer2": "Rust 构建 · Metal 加速"
+  "footer2": "Rust 构建 · Metal 加速",
+  "downloads_count": "次下载"
 }

@@ -54,5 +54,6 @@
   "upd_3_t": "टर्मिनल अपडेट",
   "upd_3_d": "Homebrew से इंस्टॉल? brew upgrade --cask lazytranslator से अपडेट करें.",
   "footer": "© LazyTranslator. 100% स्थानीय. 100% निजी.",
-  "footer2": "Rust से बना · Metal-त्वरित"
+  "footer2": "Rust से बना · Metal-त्वरित",
+  "downloads_count": "डाउनलोड"
 }

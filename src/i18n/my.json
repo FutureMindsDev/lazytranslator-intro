@@ -52,5 +52,6 @@
   "upd_3_t": "တာမီနယ် အပ်ဒိတ်",
   "upd_3_d": "Homebrew ဖြင့် တပ်ဆင်ထားပါက brew upgrade --cask lazytranslator ဖြင့် အပ်ဒိတ်ပါ။",
   "footer": "© LazyTranslator။ ၁၀၀% ဒေသခံ။ ၁၀၀% ကိုယ်ရေးကိုယ်တာ။",
-  "footer2": "Rust ဖြင့် တည်ဆောက် · Metal အရှိန်မြှင့်"
+  "footer2": "Rust ဖြင့် တည်ဆောက် · Metal အရှိန်မြှင့်",
+  "downloads_count": "ကူးယူမှုများ"
 }

@@ -54,5 +54,6 @@
   "upd_3_t": "Mise à jour par terminal",
   "upd_3_d": "Installé via Homebrew ? Mettez à jour avec brew upgrade --cask lazytranslator.",
   "footer": "© LazyTranslator. 100 % local. 100 % privé.",
-  "footer2": "Construit avec Rust · Accéléré par Metal"
+  "footer2": "Construit avec Rust · Accéléré par Metal",
+  "downloads_count": "téléchargements"
 }

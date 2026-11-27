@@ -54,5 +54,6 @@
   "upd_3_t": "ターミナルアップデート",
   "upd_3_d": "Homebrew でインストールした場合: brew upgrade --cask lazytranslator.",
   "footer": "© LazyTranslator. 100% ローカル. 100% プライベート.",
-  "footer2": "Rust 製 · Metal アクセラレーション"
+  "footer2": "Rust 製 · Metal アクセラレーション",
+  "downloads_count": "ダウンロード"
 }

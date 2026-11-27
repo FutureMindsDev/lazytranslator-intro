@@ -54,5 +54,6 @@
   "upd_3_t": "터미널 업데이트",
   "upd_3_d": "Homebrew로 설치? brew upgrade --cask lazytranslator로 업데이트.",
   "footer": "© LazyTranslator. 100% 로컬. 100% 프라이빗.",
-  "footer2": "Rust로 제작 · Metal 가속"
+  "footer2": "Rust로 제작 · Metal 가속",
+  "downloads_count": "다운로드"
 }
